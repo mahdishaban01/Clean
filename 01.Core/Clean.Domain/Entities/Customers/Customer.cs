@@ -11,6 +11,8 @@ public class Customer : BaseEntity<int>
 
     public CustomerFirstName FirstName { get; set; } = null!;
     public CustomerLastName LastName { get; set; } = null!;
+    public CustomerMobile Mobile { get; set; } = null!;
+    public CustomerNationalCode NationalCode { get; set; } = null!;
 
     #endregion
 }

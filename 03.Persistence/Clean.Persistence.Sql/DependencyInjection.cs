@@ -1,4 +1,6 @@
-﻿using Clean.Persistence.Sql.DbContext;
+﻿using Clean.Persistence.Sql.Customers;
+using Clean.Persistence.Sql.DbContext;
+using Clean.Repositories.Abstractions.Customers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -18,6 +20,7 @@ public static class DependencyInjection
 
     private static IServiceCollection AddRepositories(this IServiceCollection services)
     {
+        services.AddScoped<ICustomerRepository, EfCustomerRepository>();
 
         return services;
     }
